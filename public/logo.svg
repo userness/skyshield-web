@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Shield with wings -->
+  <g transform="translate(100, 100)">
+    <!-- Left Wing -->
+    <path d="M 100 150 C 60 120, 20 100, 0 150 C 20 130, 40 120, 60 140 C 80 160, 90 140, 100 150" 
+          fill="#621eeb" />
+    
+    <!-- Right Wing -->
+    <path d="M 200 150 C 240 120, 280 100, 300 150 C 280 130, 260 120, 240 140 C 220 160, 210 140, 200 150" 
+          fill="#621eeb" />
+    
+    <!-- Shield Body -->
+    <path d="M 100 50 L 200 50 C 210 50, 220 60, 220 70 L 220 200 C 220 240, 150 280, 150 280 C 150 280, 80 240, 80 200 L 80 70 C 80 60, 90 50, 100 50 Z" 
+          fill="#621eeb" 
+          stroke="#000000" 
+          stroke-width="8"/>
+    
+    <!-- Eyes -->
+    <circle cx="120" cy="140" r="10" fill="#000000"/>
+    <circle cx="180" cy="140" r="10" fill="#000000"/>
+    
+    <!-- Smile -->
+    <path d="M 135 160 Q 150 180 165 160" 
+          fill="none" 
+          stroke="#000000" 
+          stroke-width="6" 
+          stroke-linecap="round"/>
+  </g>
+</svg>
+

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes alarm-pulse {
+  0%,
+  100% {
+    background-color: rgba(220, 38, 38, 0.8);
+  }
+  50% {
+    background-color: rgba(153, 27, 27, 0.8);
+  }
+}
+
+.animate-alarm {
+  animation: alarm-pulse 2s ease-in-out infinite;
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
