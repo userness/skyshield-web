@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export default function ChromeExtensionInstallation() {
+  <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gradient-to-b from-black to-gray-900">
   const [activeStep, setActiveStep] = useState(0);
   const [downloadStarted, setDownloadStarted] = useState(false);
   
