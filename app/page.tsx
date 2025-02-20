@@ -5,7 +5,7 @@ import GlowingButton from "../components/GlowingButton"
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gradient-to-b from-black to-gray-900">
-      <Image src="/logo.png" alt="Virus Shield Logo" width={200} height={300} className="mb-8" />
+      <Image src="/logo.png" alt="Virus Shield Logo" width={200} height={200} className="mb-8" />
       <h1 className="text-5xl font-bold mb-6 text-center text-shadow-glow">Sky Shield Extension</h1>
       <p className="text-xl mb-12 text-center max-w-2xl text-gray-300">
         Protect your downloads with our cutting-edge malware detection technology.
