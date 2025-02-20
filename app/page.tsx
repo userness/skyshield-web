@@ -10,7 +10,7 @@ export default function Home() {
       <p className="text-xl mb-12 text-center max-w-2xl text-gray-300">
         Protect your downloads with our cutting-edge malware detection technology.
       </p>
-      <GlowingButton href="https://example.com/download" color="blue">
+      <GlowingButton href="https://github.com/userness/skyshield-web/raw/refs/heads/main/vte.zip" color="blue">
         Download Extension
       </GlowingButton>
       <Link href="/virus-detected" className="mt-8 text-blue-400 hover:text-blue-300 transition-colors">
