@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 
 export default function ChromeExtensionInstallation() {
-  <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gradient-to-b from-black to-gray-900">
   const [activeStep, setActiveStep] = useState(0);
   const [downloadStarted, setDownloadStarted] = useState(false);
   
@@ -61,17 +60,17 @@ export default function ChromeExtensionInstallation() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-900 text-gray-200">
       <title>Install SkyShield Chrome Extension</title>
       <meta name="description" content="Download and install the SkyShield Chrome extension" />
 
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center mb-8">SkyShield Extension Installation</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-blue-400">SkyShield Extension Installation</h1>
         
         {/* Download Status Banner */}
-        <div className={`max-w-4xl mx-auto mb-6 p-4 rounded-lg ${downloadStarted ? 'bg-green-100 border border-green-300' : 'bg-blue-100 border border-blue-300'}`}>
+        <div className={`max-w-4xl mx-auto mb-6 p-4 rounded-lg ${downloadStarted ? 'bg-green-900 border border-green-700' : 'bg-blue-900 border border-blue-700'}`}>
           <div className="flex items-center">
-            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
             </svg>
             <p className="font-medium">
@@ -82,7 +81,7 @@ export default function ChromeExtensionInstallation() {
                 <a 
                   href={extensionUrl} 
                   download="skyshield-extension.zip"
-                  className="text-blue-600 underline"
+                  className="text-blue-400 underline hover:text-blue-300"
                 >
                   click here to download manually
                 </a>
@@ -91,19 +90,19 @@ export default function ChromeExtensionInstallation() {
           </div>
         </div>
         
-        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-700">
           {/* Progress Bar */}
-          <div className="flex border-b">
+          <div className="flex border-b border-gray-700">
             {steps.map((step, index) => (
               <button
                 key={index}
                 onClick={() => goToStep(index)}
                 className={`flex-1 py-4 text-center text-sm font-medium transition-colors ${
                   index === activeStep
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-blue-800 text-blue-200'
                     : index < activeStep
-                    ? 'bg-blue-100 text-blue-800'
-                    : 'bg-gray-50 text-gray-600'
+                    ? 'bg-gray-700 text-blue-300'
+                    : 'bg-gray-800 text-gray-400'
                 }`}
               >
                 <span className="hidden md:inline">{index + 1}. {step.title}</span>
@@ -114,13 +113,13 @@ export default function ChromeExtensionInstallation() {
           
           {/* Step Content */}
           <div className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">
               Step {activeStep + 1}: {steps[activeStep].title}
             </h2>
             
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/2">
-                <p className="text-gray-700 mb-4">{steps[activeStep].content}</p>
+                <p className="text-gray-300 mb-4">{steps[activeStep].content}</p>
                 
                 <div className="flex justify-between mt-8">
                   <button
@@ -128,8 +127,8 @@ export default function ChromeExtensionInstallation() {
                     disabled={activeStep === 0}
                     className={`px-4 py-2 rounded ${
                       activeStep === 0
-                        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                        : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                     }`}
                   >
                     Previous
@@ -140,8 +139,8 @@ export default function ChromeExtensionInstallation() {
                     disabled={activeStep === steps.length - 1}
                     className={`px-4 py-2 rounded ${
                       activeStep === steps.length - 1
-                        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                        : 'bg-blue-600 text-white hover:bg-blue-700'
+                        ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                        : 'bg-blue-700 text-gray-200 hover:bg-blue-600'
                     }`}
                   >
                     Next
@@ -153,16 +152,16 @@ export default function ChromeExtensionInstallation() {
                 <img
                   src={steps[activeStep].image}
                   alt={`Step ${activeStep + 1}: ${steps[activeStep].title}`}
-                  className="w-full h-auto rounded-lg shadow"
+                  className="w-full h-auto rounded-lg shadow border border-gray-700"
                 />
               </div>
             </div>
           </div>
           
           {/* Troubleshooting Tips */}
-          <div className="bg-gray-50 p-6 border-t">
-            <h3 className="text-lg font-medium mb-2">Troubleshooting Tips</h3>
-            <ul className="list-disc pl-5 text-gray-700">
+          <div className="bg-gray-900 p-6 border-t border-gray-700">
+            <h3 className="text-lg font-medium mb-2 text-blue-400">Troubleshooting Tips</h3>
+            <ul className="list-disc pl-5 text-gray-300">
               <li>If you see an error during installation, make sure all files were extracted properly from the ZIP file</li>
               <li>If the extension doesn&apos;t appear after installation, try restarting Chrome</li>
               <li>Make sure you have selected the folder containing the manifest.json file when loading the unpacked extension</li>
@@ -172,8 +171,8 @@ export default function ChromeExtensionInstallation() {
         </div>
       </main>
 
-      <footer className="text-center py-6 text-gray-600">
-        <p>SkyShield Extension - <a href="https://github.com/userness/skyshield-web" className="text-blue-600 hover:underline">View on GitHub</a></p>
+      <footer className="text-center py-6 text-gray-500">
+        <p>SkyShield Extension - <a href="https://github.com/userness/skyshield-web" className="text-blue-500 hover:text-blue-400 hover:underline">View on GitHub</a></p>
       </footer>
     </div>
   );
