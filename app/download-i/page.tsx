@@ -1,6 +1,6 @@
-// pages/chrome-extension-installation.js
+"use client";
+
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
 
 export default function ChromeExtensionInstallation() {
   const [activeStep, setActiveStep] = useState(0);
@@ -61,10 +61,8 @@ export default function ChromeExtensionInstallation() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Install SkyShield Chrome Extension</title>
-        <meta name="description" content="Download and install the SkyShield Chrome extension" />
-      </Head>
+      <title>Install SkyShield Chrome Extension</title>
+      <meta name="description" content="Download and install the SkyShield Chrome extension" />
 
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-center mb-8">SkyShield Extension Installation</h1>
@@ -165,7 +163,7 @@ export default function ChromeExtensionInstallation() {
             <h3 className="text-lg font-medium mb-2">Troubleshooting Tips</h3>
             <ul className="list-disc pl-5 text-gray-700">
               <li>If you see an error during installation, make sure all files were extracted properly from the ZIP file</li>
-              <li>If the extension doesn't appear after installation, try restarting Chrome</li>
+              <li>If the extension doesn&apos;t appear after installation, try restarting Chrome</li>
               <li>Make sure you have selected the folder containing the manifest.json file when loading the unpacked extension</li>
               <li>If Chrome disables the extension automatically, check for error messages in the Extensions page</li>
             </ul>
